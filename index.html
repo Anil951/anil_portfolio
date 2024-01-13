@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>anil</title>
+    <link rel = "icon" href ="./portfolio-images/portfolio.jpeg" type = "image/x-icon">
+
+ 
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+      #app {
+        background-color: black;
+        overflow: hidden;
+      }
+      body {
+      overflow: hidden;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
+      
+      .v-application,
+      .v-application .body-1,
+      .v-application .body-2,
+      .v-application .caption,
+      .v-application .display-1,
+      .v-application .display-2,
+      .v-application .display-3,
+      .v-application .display-4,
+      .v-application .headline,
+      .v-application .overline,
+      .v-application .subtitle-1,
+      .v-application .subtitle-2,
+      .v-application .title {
+        font-family: 'Source Code Pro', monospace !important;
+      }
+      :-webkit-any(article, aside, nav, section) h1 {
+        font-size: 2em;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-top: 0;
+        margin-bottom: 0;
+        overflow: hidden;
+      }
+      @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .blinking-point {
+    display: inline-block;
+    width: 30px;
+    height: 5px;
+    background-color: rgb(255, 255, 255); /* Adjust color as needed */
+    /* border-radius: 50%; */
+    margin-left: 10px; /* Adjust the margin as needed */
+    animation: blink 1s infinite; /* Adjust animation duration as needed */
+  }
+
+
+
+    </style>
+  </head>
+
+  <body>
+
+
+    <div id="app">
+        
+      <v-app>
+
+        <header class="container" v-bind="sectionHeight">
+          <v-row align="center">
+            <v-col cols="12" md="7" data-aos="fade-up">
+              <h1 class="display-4 primary--text">{{name}}<div class="blinking-point"></div></h1>
+              
+              <br>
+              <nav>
+                <v-btn href="#aboutme" text="text" class="primary--text">/About me</v-btn>
+                <v-btn href="#skills" text="text" class="primary--text">/Skills</v-btn>
+                <v-btn href="#projects" text="text" class="primary--text">/Projects</v-btn>
+                <v-btn href="#contact" text="text" class="primary--text" outlined="outlined" style="background-color: rgb(66, 66, 66);">/Contact</v-btn>
+              </nav>
+            </v-col>
+          </v-row>
+          
+        </header>
+
+
+        <main class="container">
+            <br>
+
+            <section class="row mb-5" id="aboutme">
+                
+
+                <v-col cols="12" md="6">
+                    <br>
+                  <h1 class="primary--text" data-aos="fade-up">/ About me</h1>
+                  <br>
+                </v-col>
+                <v-col v-for="(aboutme, index) in aboutme" cols="12" :key="index">
+                      
+                        <v-card hover="hover" height="100%" data-aos="fade-up">
+                            <v-card-text >
+                                <p>{{aboutme.description}} </p>
+                                <v-btn @click="openResumeLink">Find my resume here</v-btn>
+                            </v-card-text>
+                            <v-footer>
+                              <v-spacer></v-spacer>
+                              <small class="primary--text">~/.intro</small>
+                            </v-footer>
+                        </v-card>
+                       
+                </v-col>
+
+                <v-col v-for="(aboutme, index) in aboutme" cols="6" :key="index">
+                    <v-card hover="hover" height="100%" data-aos="fade-up" >
+                        <v-card-text>
+                            <p>{{aboutme.interests1}}</p>
+                            <p>{{aboutme.interests2}}</p>
+                            <p>{{aboutme.interests3}}</p>
+                            <p>{{aboutme.interests4}}</p>
+                        </v-card-text>
+        
+                        <v-footer>
+                          <v-spacer></v-spacer>
+                          <small class="primary--text">~/.interets</small>
+                        </v-footer>
+                    </v-card>
+                </v-col>
+
+                <v-col v-for="(aboutme, index) in aboutme" cols="6" :key="index">
+                    <v-card hover="hover" height="100%" data-aos="fade-up" >
+
+                        <v-card-text>
+                            <p>{{aboutme.fp1}}</p>
+                            <p>{{aboutme.fp2}}</p>
+                            <p>{{aboutme.fp3}}</p>
+                            <p>{{aboutme.fp4}}</p>
+                        </v-card-text>
+        
+                        <v-footer>
+                          <v-spacer></v-spacer>
+                          <small class="primary--text">~/.future plans</small>
+                        </v-footer>
+                    </v-card>
+                </v-col>
+
+
+                
+                
+                
+                
+            </section>
+            <br>
+            <br><br>
+            <br>
+            <br>
+            <br>
+            
+            <section class="row mb-5" id="skills">
+                <v-col cols="12" md="10">
+                  <br><br><h1 class="primary--text" data-aos="fade-up">/Skills</h1><br>
+                </v-col>
+              
+                <v-col v-for="(skill, index) in skills" cols="6" :key="index">
+                  <v-hover>
+                    <template v-slot="{ hover }">
+                      <v-card hover="hover" height="100%" data-aos="fade-up">
+                        <v-card-text>
+                          <h2 v-if="!hover" class="primary--text">{{skill.name}}</h2>
+                          <h2 v-if="hover">{{skill.stacks}}</h2>
+                          <br>
+                        </v-card-text>
+                        <v-footer>
+                          <v-spacer></v-spacer>
+                          <small class="primary--text">~/.skills</small>
+                        </v-footer>
+                      </v-card>
+                    </template>
+                  </v-hover>
+                </v-col>
+              </section>
+          <br>
+            <br>
+            <br>
+            <br>
+          
+          
+            
+<section class="row mb-5" id="projects">
+  <v-col cols="12" md="6">
+    <h1 class="primary--text" data-aos="fade-up">/ Projects</h1>
+  </v-col>
+  <v-col v-for="(work, index) in projects" cols="12" :key="index">
+    <v-card hover="hover" height="100%" data-aos="fade-up">
+      <v-card-text>
+        <v-row>
+          <v-col cols="10">
+            <h2 class="primary--text">{{work.name}}</h2>
+          </v-col>
+          <v-col cols="2">
+            <v-btn v-if="work.link" outlined color="primary" @click="redirectToProject(work.link)">Project Link</v-btn>
+          </v-col>
+        </v-row>
+        <br>
+        <p>{{work.description}}</p>
+        <br>
+        <p><strong>Stack:</strong> {{work.stack}}</p>
+      </v-card-text>
+      <v-footer>
+        <v-spacer></v-spacer>
+        <small class="primary--text">~/.projects</small>
+      </v-footer>
+    </v-card>
+  </v-col>
+</section>
+
+          <br>
+            <br>
+            
+            
+            <br>
+            <section class="row justify-center" id="contact">
+                <v-col cols="12" md="10" class="text-center">
+                  <br><h1 class="primary--text" data-aos="fade-up">/ Let's Talk!</h1>
+                </v-col>
+              
+                <!-- Form Section -->
+                <v-col class="text-center" cols="6" data-aos="fade-up">
+                  <v-form>
+                    <v-text-field v-model="email" label="Email" outlined></v-text-field>
+                    <v-textarea v-model="message" label="Message" outlined></v-textarea>
+                    <v-col class="text-center" cols="12" data-aos="fade-up">
+                        <v-btn class="ma-1" v-for="(link, index) in contactLinks" outlined="outlined" rounded="rounded" target="_blank" :href="link.link" :key="index" color="primary">
+                          {{link.name}}
+                        </v-btn>
+                      </v-col>
+                      <br>
+                   
+                    <v-btn @click="sendMessage" >Send</v-btn>
+                    <br><br><br><br>
+                  </v-form>
+                </v-col>
+              
+              
+              </section>
+              
+              
+              
+        </main>
+        
+      </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="config.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script>
+    // import emailjs from 'emailjs-com';
+
+      var vm = new Vue({
+        el: '#app',
+        vuetify: new Vuetify({
+          theme: {
+            dark: true,
+            themes: {
+              dark: {
+                primary: '#FFFFFF',
+                secondary: '#FFFFFF',
+                accent: '#82B1FF',
+                error: '#FF5252',
+                info: '#FFFFFF',
+                success: '#4CAF50',
+                warning: '#FFC107'
+              }
+            }
+          }
+        }),
+       
+        data() {
+            
+          return {
+            message: '',
+        email: '',
+            menu: false,
+            ...window.PorfolioConfig
+          };
+        },
+        socialMediaLinks: [
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/your-linkedin-profile' },
+      { name: 'GitHub', url: 'https://github.com/your-github-profile' },
+      { name: 'Instagram', url: 'https://www.instagram.com/your-instagram-profile' },
+      // Add more social media links as needed
+    ],
+        computed: {
+          $isMobile() {
+            return this.$vuetify.breakpoint.smAndDown;
+          },
+          sectionHeight() {
+            return {style: 'min-height: 100vh', class: 'fill-height'}
+          },
+          contactLinks() {
+            if (this.contacts && this.contacts.links && this.contacts.links.length) {
+              return this.contacts.links;
+            }
+            return [];
+          }
+        },
+        methods: {
+          openResumeLink() {
+    window.open('https://drive.google.com/file/d/1zurWHkdjzNQRTalic6Xo85olY0kI0zAW/view?usp=drive_link', '_blank');
+  },
+            sendMessage() {
+    const typedMessage = this.message;
+    const typedEmail = this.email;
+
+    // Send email using EmailJS
+    const templateParams = {
+      to_email: 'anilkumarborige2@gmail.com', // Replace with your email
+      from_email: typedEmail,
+      message: typedMessage
+    };
+
+    emailjs.send('service_b970zj1', 'template_rbl3749', templateParams, 'tZDQnYvojsxh4Frqq')
+      .then(response => {
+        console.log('Email sent successfully:', response);
+      })
+      .catch(error => {
+        console.error('Error sending email:', error);
+      });
+
+    // Log to the console (optional)
+    console.log('Typed Message:', typedMessage);
+    console.log('Typed Email:', typedEmail);
+
+    // Clear the input fields
+    this.message = '';
+    this.email = '';
+  },
+   
+      redirectToProject(link) {
+        window.open(link, '_blank');
+      }
+    }
+      });
+      
+      AOS.init({
+        once: true,
+        delay: 0
+      });
+    </script>
+  </body>
+
+</html>

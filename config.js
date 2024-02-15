@@ -49,7 +49,7 @@ window.abc = {
         name: 'TY Rank - Youtube Video Recommendation for Domain Specific Content',
         link: 'https://github.com/Anil951/YouTube-Video-Recommendation-for-Domain-Specific-Content',
         hostedLink: 'https://github.com/Anil951/YouTube-Video-Recommendation-for-Domain-Specific-Content',
-        description: 'Delivering Domain-specific YouTube video recommendations for first-time viewers through sentiment analysis on comments using an ensemble of multiple models. The system also includes spam filtering on comments and video ranking based on normalized scores, Primarily catering to first-time viewers.',
+        description: 'Delivering Domain-specific YouTube video recommendations for first-time viewers through sentiment analysis on comments using an ensemble of multiple models. The system also includes spam filtering, multilingual and transliterated text support on comments and video ranking based on normalized scores, Primarily catering to first-time viewers.',
         stack: 'NLP|LSTM|Python|YouTube Data API|Data Science'
       },
       {

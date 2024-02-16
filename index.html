@@ -70,7 +70,12 @@
     margin-left: 10px; /* Adjust the margin as needed */
     animation: blink 1s infinite; /* Adjust animation duration as needed */
   }
-
+  .custom-button {
+  border: none;
+  background-color: transparent;
+  padding: 8px;
+  cursor: pointer;
+}
 
 
     </style>
@@ -237,7 +242,7 @@
             <br>
             <section class="row justify-center" id="contact">
                 <v-col cols="12" md="10" class="text-center">
-                  <br><h1 class="primary--text" data-aos="fade-up">/ Let's Talk!</h1>
+                  <br><br><br><h1 class="primary--text" data-aos="fade-up">/ Let's Talk!</h1>
                 </v-col>
               
                 <!-- Form Section -->
@@ -246,17 +251,19 @@
                     <v-text-field v-model="email" label="Email" outlined></v-text-field>
                     <v-textarea v-model="message" label="Message" outlined></v-textarea>
                     <v-col class="text-center" cols="12" data-aos="fade-up">
-                        <v-btn class="ma-1" v-for="(links, index) in links" outlined="outlined" rounded="rounded" target="_blank" :href="links.link" :key="index" color="primary">
-                          {{links.name}}
+                      <template>
+                        <v-btn class="ma-1" v-for="(link, index) in links" outlined target="_blank" :href="link.link" :key="index" color="primary" style="padding: 8px;border-color: black;">
+                          <div v-html="link.icon"></div>
                         </v-btn>
+                      </template>
+                      
                       </v-col>
                       <br>
                    
                     <v-btn @click="sendMessage" >Send</v-btn>
-                    <br><br><br><br>
+                    <br><br><br>
                   </v-form>
                 </v-col>
-              
               
               </section>
               
@@ -295,6 +302,7 @@
         }),
        
         data() {
+          
             
           return {
             message: '',
@@ -354,6 +362,8 @@
         once: true,
         delay: 0
       });
+
+      
     </script>
   </body>
 

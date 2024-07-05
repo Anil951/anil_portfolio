@@ -86,7 +86,7 @@ window.abc = {
     },
     {
       name: 'Fair Split',
-      link: 'https://github.com/Anil951/Fair-Split',
+      link: 'https://fair-split.netlify.app/',
       hostedLink:'https://fair-split.netlify.app/',
       description: ' Users can add individual expenses, specify who participated in each expense, and see how much each person owes. The app calculates the total expenses for each user and provides detailed breakdowns of each expense.This project aims to simplify group expense management without needing a backend database, making it a convenient, one-time use application for various social scenarios.',
       stack: ' React js, HTML, CSS, JS'

@@ -13,7 +13,7 @@ window.abc = {
     },
     {
       name: 'Web Development',
-      stacks:'HTML, CSS, JS, Bootstrap'
+      stacks:'React js, HTML, CSS, JS, Bootstrap'
     },
     {
       name: 'Machine Learning',
@@ -26,6 +26,10 @@ window.abc = {
     {
       name: 'Database Management | Frameworks',
       stacks:'MySQL, MongoDB | Flask'
+    },
+    {
+      name: 'Deep Learning',
+      stacks:'Tensorflow, Keras, CNN, RNN, LSTM, Image Processing'
     },
    
   ],
@@ -79,6 +83,13 @@ window.abc = {
       hostedLink:'https://github.com/Anil951/college_database',
       description: ' Developed a University Management System using MySQL to manage faculties, HODs, teachers, students, alumni,subjects, day scholars, hostellers, courses, results, and GPA records. The system maintains key relationships (one-to-one, one-to-many, many-to-one) and includes triggers to automatically calculate GPA, as well as to restrict alumni record modifications, ensuring data consistency checks, and unique constraints for data integrity.',
       stack: ' MySQL'
+    },
+    {
+      name: 'Fair Split',
+      link: 'https://github.com/Anil951/Fair-Split',
+      hostedLink:'https://fair-split.netlify.app/',
+      description: ' Users can add individual expenses, specify who participated in each expense, and see how much each person owes. The app calculates the total expenses for each user and provides detailed breakdowns of each expense.This project aims to simplify group expense management without needing a backend database, making it a convenient, one-time use application for various social scenarios.',
+      stack: ' React js, HTML, CSS, JS'
     }
   ],
  

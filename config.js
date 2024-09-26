@@ -64,25 +64,11 @@ window.abc = {
       stack: ' ML|Flask|Python|HTML|CSS|JS|AJAX|Data Science'
     },
     {
-      name: 'ShelterGuide',
-      link: 'https://shelterguide.onrender.com/',
-      hostedLink: 'https://shelterguide.onrender.com/',
-      description: 'A Machine Learning platform designed to predict house and rent prices while providing visual representations of housing locations on maps across six major cities in India. The platform incorporates essential amenities and nearby resources, enhancing the overall understanding of the housing landscape.',
-      stack: ' ML|Flask|Python|HTML|CSS|JS|Data Science'
-    },
-    {
       name: 'Camera',
       link: 'https://anil951.github.io/camera/',
       hostedLink:'https://anil951.github.io/camera/',
       description: 'An all-in-one Camera Application designed for versatile use on any device. This application allows users to capture photos and videos seamlessly, featuring a temporary gallery option with the ability to delete or download content. Additionally, it offers a one-time-use functionality, making it suitable for various appliances.',
       stack: ' HTML|CSS|JS'
-    },
-    {
-      name: 'Univeristy Database',
-      link: 'https://github.com/Anil951/college_database',
-      hostedLink:'https://github.com/Anil951/college_database',
-      description: ' Developed a University Management System using MySQL to manage faculties, HODs, teachers, students, alumni,subjects, day scholars, hostellers, courses, results, and GPA records. The system maintains key relationships (one-to-one, one-to-many, many-to-one) and includes triggers to automatically calculate GPA, as well as to restrict alumni record modifications, ensuring data consistency checks, and unique constraints for data integrity.',
-      stack: ' MySQL'
     },
     {
       name: 'Fair Split',
